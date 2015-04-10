@@ -1,0 +1,6 @@
+name: 'trim string'
+description: 'Custom twig filters in use by the custom theme'
+version: 8.x
+core: 8.x
+package: 'FL DrupalCamp 2015'
+type: module
