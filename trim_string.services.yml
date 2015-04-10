@@ -1,5 +1,5 @@
 services:
   trim_string.twig.trim_string_twig_extension:
-    class: Drupal\Core\Template\TwigExtension\trimStringTwigExtension
+    class: Drupal\trim_string\TwigExtension\TrimStringTwigExtension
     tags:
-      - { name: twig.extension }
+      - { name: twig_extension }
