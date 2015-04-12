@@ -12,7 +12,7 @@ class TrimStringTwigExtension extends \Twig_Extension {
 
   public function getFilters() {
     return array(
-      new \Twig_SimpleFilter( array('Drupal\trim_string\TwigExtension\trimStringTwigExtension', 'trimString') )
+      new \Twig_SimpleFilter('trim_string', array('Drupal\trim_string\TwigExtension\trimStringTwigExtension', 'trimString') )
     );
   }
 
