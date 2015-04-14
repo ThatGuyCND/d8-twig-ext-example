@@ -2,17 +2,17 @@
 
 namespace Drupal\trim_string\TwigExtension;
 
-use Drupal\Core\Template\TwigExtension;
+//use Drupal\Core\Template\TwigExtension;
 
 class TrimStringTwigExtension extends \Twig_Extension {
 
   public function getName() {
-    return 'trim_string.trim_string_twig_extension';
+    return 'trim_string';
   }
 
   public function getFilters() {
     return array(
-      new \Twig_SimpleFilter( array('Drupal\trim_string\TwigExtension\trimStringTwigExtension', 'trimString') )
+      new \Twig_SimpleFilter('trim_string', 'trimString', array('is_safe' => array('html')))
     );
   }
 
