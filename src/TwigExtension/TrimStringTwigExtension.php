@@ -17,19 +17,3 @@ class TrimStringTwigExtension extends TwigExtension {
   }
 
 }
-
-/**
- * This better fucking work, and if it doesn't then there needs to be a better way of building a new _filter()
- */
-function twig_trim_string_filter($string, $limit = 10, $suffix = '&hellip;') {
-  $phrase = $string;
-  $words = explode(' ', $phrase);
-
-  if ( count($words) < $limit ) {
-    return $string;
-  }
-
-  $string = implode(' ', array_slice($words, 0, $limit)) . $suffix;
-
-  return $string;
-}

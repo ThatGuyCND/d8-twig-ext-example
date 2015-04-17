@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Trims Strings to an arbitrary length.
+ *
+ * @param string[] $string
+ *   The string that is being filtered.
+ * @param int $length
+ *   The number of words to limit the length of the returned string.
+ * @param string[] $suffix
+ *   Appended to the trimmed string only when the input string exceeds the $limit.
+ *
+ * @return string
+ *   The string that was originally passed in if less than $length, or the string after being trimmed to $length.
+ */
+function twig_trim_string_filter($string, $limit = 10, $suffix = '&hellip;') {
+  $words = explode(' ', $string);
+
+  if ( count($words) < $limit ) {
+    return $string;
+  }
+
+  $string = implode(' ', array_slice($words, 0, $limit)) . $suffix;
+
+  return $string;
+}
